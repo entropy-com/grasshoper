@@ -1,0 +1,25 @@
+{
+  "name": "lab1",
+  "version": "1.0.0",
+  "main": "hi.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@aws-sdk/client-ec2": "^3.836.0",
+    "@aws-sdk/client-pricing": "^3.835.0",
+    "@google-cloud/billing": "^5.0.1",
+    "@google-cloud/compute": "^5.2.0",
+    "axios": "^1.9.0",
+    "cheerio": "^1.1.0",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "googleapis": "^150.0.1",
+    "puppeteer": "^24.10.1",
+    "vite": "^6.3.5"
+  }
+}
