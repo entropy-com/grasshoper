@@ -1,6 +1,6 @@
 // This is the main Node.js server file.
 // It now includes server-side filtering based on query parameters.
-
+const { listAvailableGPUs } = require('./hyperbolic.js');
 const { getPrice } = require('./gcloud.js'); // Import the getPrice function from gcloud.js
 const express = require('express'); // Import Express framework
 const app = express(); // Create an Express application instance
@@ -14,6 +14,11 @@ const corsoptions = {
 
 app.use(cors(corsoptions)); // Enable CORS with specified options
 app.use(express.json()); // Enable parsing JSON bodies from incoming requests
+
+app.get('/hyperbolic', async (req, res) => {
+    const data = await listAvailableGPUs();
+    res.json(data);
+});
 
 // Define a GET route for the root URL '/'
 app.get('/', async (req, res) => {
